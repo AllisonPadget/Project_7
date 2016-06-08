@@ -1,9 +1,7 @@
 /*** mobile first ****/
 
 .video-controls {
-	background: rgba(0,0,0,0.6);
 	display: block;
-	border-radius: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
 }
