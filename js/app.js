@@ -65,6 +65,9 @@ fullScreenButton.addEventListener("click", function() {
 //Progress Bar
 
 
+//Highlight transcript
+
+
 
 
 

@@ -8,53 +8,64 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="CSS/media.css">
+
   </head>
   <body>
     
     <div class="wrapper">
    
-      <video id="video">
-        <source src="video/video.mp4" type="video/mp4">
-        <source src="video/video.ogg" type="video/ogg">
-        <track label="English" kind="subtitles" srclang="en" src="video/captions.vtt" default>
-      </video>
+      <div class="video-container">
+        <video id="video">
+          <source src="video/video.mp4" type="video/mp4">
+          <source src="video/video.ogg" type="video/ogg">
+          <track label="English" kind="subtitles" srclang="en" src="video/captions.vtt" default>
+        </video>
       
-      <div id="video-controls" class="video-controls">
-        <button id="play-btn" type="button"><img src="icons/play-icon.png"></button>
-        <button id="pause-btn" type="button"><img src="icons/pause-icon.png"></button>
+        <div id="video-controls" class="video-controls">
 
-        <input type="range" id="seek-bar" value="0"> 
+          <div class="leftSide-controls">
+            <button id="play-btn" type="button"><img src="icons/play-icon.png"></button>
+            <button id="pause-btn" type="button"><img src="icons/pause-icon.png"></button>
+          </div>
 
-        <!-- <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1"> -->
-        <button id="volume-off" type="button"><img src="icons/volume-off-icon.png"></button>
-        <button id="volume-on" type="button"><img src="icons/volume-on-icon.png"></button>
-        <button id="fullscreen" type="button"><img src="icons/fullscreen-icon.png"></button>
+          <div class="progress">
+            <input type="range" id="progress-bar" value="0"> 
+          </div>
+
+          <div class="rightSide-controls">
+            <button id="volume-off" type="button"><img src="icons/volume-off-icon.png"></button>
+            <button id="volume-on" type="button"><img src="icons/volume-on-icon.png"></button>
+            <button id="fullscreen" type="button"><img src="icons/fullscreen-icon.png"></button>
+          </div>
+
+        </div>
       </div>
 
      
 
       <div class="transcript">
         <p>
-          <span>Now that we've looked at the architecture of the internet, let's see how you might</span>
-          <span> connect your personal devices to the internet inside your house.</span>
-          <span>Well there are many ways to connect to the internet, and </span>
-          <span>most often people connect wirelessly.</span>
-          <span>Let's look at an example of how you can connect to the internet.</span>
-          <span>If you live in a city or a town, you probably have a coaxial cable for </span>
-          <span>cable Internet, or a phone line if you have DSL, running to the outside of</span>
-          <span>your house, that connects you to the Internet Service Provider, or ISP.</span>
-          <span>If you live far out in the country, you'll more likely have </span>
-          <span>a dish outside your house, connecting you wirelessly to your closest ISP, or </span>
-          <span>you might also use the telephone system.</span>
-          <span>Whether a wire comes straight from the ISP hookup outside your house, or </span>
-          <span>it travels over radio waves from your roof, </span>
-          <span>the first stop a wire will make once inside your house, is at your modem.</span>
-          <span>A modem is what connects the internetto your network at home. </span>
-          <span>A few common residential modems are DSL or </span>
+          <span data-start="00.240">Now that we've looked at the architecture of the internet, let's see how you might</span>
+          <span data-start="04.130"> connect your personal devices to the internet inside your house.</span>
+          <span data-start="07.535">Well there are many ways to connect to the internet, and </span>
+          <span data-start="11.270">most often people connect wirelessly.</span>
+          <span data-start="13.960">Let's look at an example of how you can connect to the internet.</span>
+          <span data-start="17.940">If you live in a city or a town, you probably have a coaxial cable for </span>
+          <span data-start="22.370">cable Internet, or a phone line if you have DSL, running to the outside of</span>
+          <span data-start="26.880">your house, that connects you to the Internet Service Provider, or ISP.</span>
+          <span data-start="32.100">If you live far out in the country, you'll more likely have </span>
+          <span data-start="34.730">a dish outside your house, connecting you wirelessly to your closest ISP, or </span>
+          <span data-start="39.430">you might also use the telephone system.</span>
+          <span data-start="42.350">Whether a wire comes straight from the ISP hookup outside your house, or </span>
+          <span data-start="46.300">it travels over radio waves from your roof, </span>
+          <span data-start="49.270">the first stop a wire will make once inside your house, is at your modem.</span>
+          <span data-start="53.760">A modem is what connects the internetto your network at home. </span>
+          <span data-start="57.780">A few common residential modems are DSL or </span>
         </p>
       </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="js/app.js"></script>
 
   </body>
