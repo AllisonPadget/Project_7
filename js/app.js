@@ -88,7 +88,9 @@ video.addEventListener('timeupdate', function(){
 
 //Progress Bar - update spot when clicked
 
-
+// video.addEventListener('mousedown', function(){
+// 	var value = 
+// });
 
 
 //display Time - update current playing time
@@ -97,8 +99,6 @@ video.addEventListener('timeupdate', function(){
 video.addEventListener('timeupdate', function(){
 	var minutes = Math.floor(video.currentTime / 60);
 	var seconds = "0" + Math.floor(video.currentTime - minutes * 60);
-	// var min = minutes < 10 ? " " + minutes + ":": minutes;
-	// var sec = seconds < 10 ? "0" + seconds : seconds;
 	currTime.innerHTML = ( minutes + ":" + seconds + " " + "/");
 });
 
@@ -116,6 +116,16 @@ video.addEventListener('timeupdate', function(){
 
 //Highlight transcript
 
+
+//Hide and Show controls
+
+$('#video').mouseenter(function() {
+	$('#video-controls').fadeIn(700);
+});
+
+$('#video').mouseleave(function() {
+	$('#video-controls').fadeOut(700);
+});
 
 
 
