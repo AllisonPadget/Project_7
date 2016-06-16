@@ -39,10 +39,12 @@ pauseButton.addEventListener('click', function() {
 
 //restart video button
 
-// restart.addEventListener('click', function(){
-// 	var time = 0;
-// 	video.currentTime = time;
-// });
+restart.addEventListener('click', function(){
+	video.currentTime = 0;
+});
+
+//****doesn't allow more restarts and doesn't replay after 5 seconds
+
 
 
 // Volume Controls - ON and OFF
@@ -100,7 +102,7 @@ video.addEventListener('timeupdate', function(){
 	currTime.innerHTML = ( minutes + ":" + seconds + " " + "/");
 });
 
-//time after 10seconds not displaying correctly yet, there's an extra 0
+//****time after 10seconds not displaying correctly yet, there's an extra 0
 
 
 //video duration time
