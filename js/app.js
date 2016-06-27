@@ -2,15 +2,13 @@ var video = document.getElementById("video");
 
 var playButton = document.getElementById("play-btn");
 var pauseButton = document.getElementById("pause-btn");
-var fullScreenButton = document.getElementById("fullscreen");
 
+
+var fullScreenButton = document.getElementById("fullscreen");
 var volumeOn = document.getElementById("volume-on");
 var volumeOff = document.getElementById("volume-off");
 
 var progressBar = document.getElementById("progress-bar");
-
-
-var restart = document.getElementById("restart-btn");
 
 
 var currTime = document.getElementById("currentTime");
@@ -37,13 +35,7 @@ pauseButton.addEventListener('click', function() {
 });
 
 
-//restart video button
 
-restart.addEventListener('click', function(){
-	video.currentTime = 0;
-});
-
-//****doesn't allow more restarts and doesn't replay after 5 seconds
 
 
 
@@ -88,10 +80,13 @@ video.addEventListener('timeupdate', function(){
 
 //Progress Bar - update spot when clicked
 
-// video.addEventListener('mousedown', function(){
-// 	var value = 
+// progressBar.addEventListener('timeupdate', function(){
+//   if (value == 0) {
+//     video.currentTime = value;
+//   } else {
+//     video.currentime += value;
+//   }
 // });
-
 
 //display Time - update current playing time
 
@@ -114,18 +109,32 @@ video.addEventListener('timeupdate', function(){
 });
 
 
-//Highlight transcript
-
 
 //Hide and Show controls
 
-$('#video').mouseenter(function() {
-	$('#video-controls').fadeIn(700);
-});
+// $('#video').mouseenter(function() {
+// 	$('#video-controls').fadeIn(500);
+// });
 
-$('#video').mouseleave(function() {
-	$('#video-controls').fadeOut(700);
-});
+// $('#video').mouseleave(function() {
+// 	$('#video-controls').fadeOut(900);
+// });
+
+// $('#video').mouseenter(function() {
+// 	$('.displayTime').fadeIn(500);
+// });
+
+// $('#video').mouseleave(function() {
+// 	$('.displayTime').fadeOut(900);
+// });
+
+
+//Highlight transcript
+
+
+
+
+
 
 
 

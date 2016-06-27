@@ -14,6 +14,9 @@ video {
 	width: 100%;
 }
 
+.displayTime {
+	padding-left: 125px;	
+}
 
 
 .leftSide-controls {
@@ -25,15 +28,18 @@ video {
 }
 
 
+.progress {
+	position: relative;
+	bottom: 20px;
+}
 
 input[type="range"] {
   width: 100%;
-  height: 20px;
+  height: 15px;
   margin: 0;
   border: none;
   padding: 1px 2px;
-  background: #232528;
-  box-shadow: inset 0 1px 0 0 #0d0e0f, inset 0 -1px 0 0 #3a3d42;
+  background: rgba(0,0,0,0.5);
   outline: none; 
   cursor: pointer;
 }
@@ -69,7 +75,7 @@ p {
 
 
 .transcript {
-	margin: 20px 35px;
+	margin: 0 50px;
 	line-height: 2;
 }
 
