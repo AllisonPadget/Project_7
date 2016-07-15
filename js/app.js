@@ -78,18 +78,19 @@ video.addEventListener('timeupdate', function(){
 });
 
 
+
+//*****************************************
 //Progress Bar - update spot when clicked
 
-// progressBar.addEventListener('timeupdate', function(){
-//   if (value == 0) {
-//     video.currentTime = value;
-//   } else {
-//     video.currentime += value;
-//   }
-// });
+progressBar.addEventListener('change', function(){
+  var time = video.duration * (progressBar.value / 100);
+  video.currentTime = time;
+});
+
+
+
 
 //display Time - update current playing time
-
 
 video.addEventListener('timeupdate', function(){
 	var minutes = Math.floor(video.currentTime / 60);
@@ -129,13 +130,33 @@ video.addEventListener('timeupdate', function(){
 // });
 
 
+//*****************************************
+
 //Highlight transcript
 
+// var highlight = document.querySelectorAll('data-start');
+
+// video.addEventListener('timeupdate', function(){
+//   var highlight = video.currentTime;
+
+//     if (highlight > 0 && highlight < 4.13) {
+//     highlight.classList.add('highlight');
+//   } else {
+//     highlight.classList.remove('highlight');
+//   }
+
+ 
+
+// });
 
 
+//on click
 
+// var captionTime = [array of start times];
 
+// highlight[0].addEventListener('click', function(e){
+//   video.currentTime = captionTime[0];
+// });
 
-
-
+//repeat
 
