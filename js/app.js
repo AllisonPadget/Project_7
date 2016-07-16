@@ -1,7 +1,7 @@
 var video = document.getElementById("video");
 
 var playButton = document.getElementById("play-btn");
-var pauseButton = document.getElementById("pause-btn");
+// var pauseButton = document.getElementById("pause-btn");
 
 
 var fullScreenButton = document.getElementById("fullscreen");
@@ -18,21 +18,28 @@ var durTime = document.getElementById("totalTime");
 
 // Play and Pause Buttons
 
+
 playButton.addEventListener('click', function() {
   if (video.paused == true) {
     video.play();
+    playButton.innerHTML = "<img src='icons/pause-icon.png'/>";
   } else {
     video.pause();
+    playButton.innerHTML = "<img src='icons/play-icon.png'/>";
   }
 });
 
-pauseButton.addEventListener('click', function() {
-  if (video.paused == true) {
-    video.pause();
-  } else {
-    video.pause();
-  }
-});
+// pauseButton.addEventListener('click', function() {
+//   if (video.paused == true) {
+//     video.pause();
+//     $('#pause-btn').hide();
+//   } else {
+//     video.pause();
+//     $('#play-btn').show();
+//     $('#pause-btn').hide();
+//   }
+// });
+
 
 
 
