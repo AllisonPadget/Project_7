@@ -1,15 +1,12 @@
 var video = document.getElementById("video");
 
 var playButton = document.getElementById("play-btn");
-// var pauseButton = document.getElementById("pause-btn");
-
 
 var fullScreenButton = document.getElementById("fullscreen");
 var volumeOn = document.getElementById("volume-on");
 var volumeOff = document.getElementById("volume-off");
 
 var progressBar = document.getElementById("progress-bar");
-
 
 var currTime = document.getElementById("currentTime");
 var durTime = document.getElementById("totalTime");
@@ -28,21 +25,6 @@ playButton.addEventListener('click', function() {
     playButton.innerHTML = "<img src='icons/play-icon.png'/>";
   }
 });
-
-// pauseButton.addEventListener('click', function() {
-//   if (video.paused == true) {
-//     video.pause();
-//     $('#pause-btn').hide();
-//   } else {
-//     video.pause();
-//     $('#play-btn').show();
-//     $('#pause-btn').hide();
-//   }
-// });
-
-
-
-
 
 
 
@@ -79,7 +61,7 @@ fullScreenButton.addEventListener('click', function() {
 
 //Progress Bar - move with video
 
-video.addEventListener('timeupdate', function(){
+video.addEventListener('timeupdate', function(e){
 	var value = (100 / video.duration) * video.currentTime;
 	progressBar.value = value;
 });
@@ -101,8 +83,10 @@ progressBar.addEventListener('change', function(){
 
 video.addEventListener('timeupdate', function(){
 	var minutes = Math.floor(video.currentTime / 60);
-	var seconds = "0" + Math.floor(video.currentTime - minutes * 60);
-	currTime.innerHTML = ( minutes + ":" + seconds + " " + "/");
+	var seconds = Math.floor(video.currentTime - minutes * 60);
+  var x = minutes < 10 ? "" + minutes + ":":minutes;
+  var y = seconds < 10 ? "0" + seconds : seconds;
+	currTime.innerHTML = ( x + y + " " + "/");
 });
 
 //****time after 10seconds not displaying correctly yet, there's an extra 0
