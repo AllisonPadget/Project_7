@@ -11,6 +11,7 @@ var progressBar = document.getElementById("progress-bar");
 var currTime = document.getElementById("currentTime");
 var durTime = document.getElementById("totalTime");
 
+//*****************************************
 
 
 // Play and Pause Buttons
@@ -58,6 +59,8 @@ fullScreenButton.addEventListener('click', function() {
 });
 
 
+//*****************************************
+
 
 //Progress Bar - move with video
 
@@ -67,15 +70,31 @@ video.addEventListener('timeupdate', function(e){
 });
 
 
+//Progress Bar - fill in as video plays
 
-//*****************************************
+
+
+
+
+
+
+
+
 //Progress Bar - update spot when clicked
+
+//NOT WORKING 
+
 
 progressBar.addEventListener('change', function(){
   var time = video.duration * (progressBar.value / 100);
   video.currentTime = time;
 });
 
+
+
+
+
+//*****************************************
 
 
 
@@ -89,7 +108,6 @@ video.addEventListener('timeupdate', function(){
 	currTime.innerHTML = ( x + y + " " + "/");
 });
 
-//****time after 10seconds not displaying correctly yet, there's an extra 0
 
 
 //video duration time
@@ -101,6 +119,7 @@ video.addEventListener('timeupdate', function(){
 });
 
 
+//*****************************************
 
 //Hide and Show controls
 
@@ -125,29 +144,82 @@ video.addEventListener('timeupdate', function(){
 
 //Highlight transcript
 
-// var highlight = document.querySelectorAll('data-start');
 
-// video.addEventListener('timeupdate', function(){
-//   var highlight = video.currentTime;
+function startHighlight(startTime) {
+  var highlight = document.querySelector('[data-start="' + startTime + '"]').classList;
+  highlight.add('highlight');
+}
 
-//     if (highlight > 0 && highlight < 4.13) {
-//     highlight.classList.add('highlight');
-//   } else {
-//     highlight.classList.remove('highlight');
-//   }
-
- 
-
-// });
+function endHighlight(endTime) {
+  var highlight = document.querySelector('[data-start="' + endTime + '"]').classList;
+  highlight.remove('highlight');
+}
 
 
-//on click
+video.addEventListener('timeupdate', function(){
+  var time = video.currentTime;
 
-// var captionTime = [array of start times];
+  if (time > 0.24 && time < 4.13) {
+      startHighlight('00.24');
+  } else if (time >= 4.13 && time < 7.535) {
+      endHighlight('00.24');
+      startHighlight('4.13'); 
+  } else if (time >= 7.535 && time < 11.27) {
+      endHighlight('4.13');
+      startHighlight('7.535');
+  } else if (time >= 11.27 && time < 13.96) {
+      endHighlight('7.535');
+      startHighlight('11.27');
+  } else if (time >= 13.96 && time < 17.94) {
+      endHighlight('11.27');
+      startHighlight('13.96');
+  } else if (time >= 17.94 && time < 22.37) {
+      endHighlight('13.96');
+      startHighlight('17.94');
+  } else if (time >= 22.37 && time < 26.88) {
+      endHighlight('17.94');
+      startHighlight('22.37');
+  } else if (time >= 26.88 && time < 32.1) {
+      endHighlight('22.37');
+      startHighlight('26.88');
+  } else if (time >= 32.1 && time < 34.73) {
+      endHighlight('26.88');
+      startHighlight('32.1');
+  } else if (time >= 34.73 && time < 39.43) {
+      endHighlight('32.1');
+      startHighlight('34.73');
+  } else if (time >= 39.43 && time < 42.35) {
+      endHighlight('34.73');
+      startHighlight('39.43');
+  } else if (time >= 42.35 && time < 46.3) {
+      endHighlight('39.43');
+      startHighlight('42.35');
+  } else if (time >= 46.3 && time < 49.27) {
+      endHighlight('42.35');
+      startHighlight('46.3');
+  } else if (time >= 49.27 && time < 53.76) {
+      endHighlight('46.3');
+      startHighlight('49.27');
+  } else if (time >= 53.76 && time < 57.78) {
+      endHighlight('49.27');
+      startHighlight('53.76');
+  } else if (time >= 57.78 && time < 59.00) {
+      endHighlight('53.76');
+      startHighlight('57.78');
+  }
+});
 
-// highlight[0].addEventListener('click', function(e){
-//   video.currentTime = captionTime[0];
-// });
 
-//repeat
+
+
+
+
+
+
+
+
+
+
+
+
 
