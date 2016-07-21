@@ -33,6 +33,8 @@ video {
 	bottom: 20px;
 }
 
+
+
 input[type="range"] {
   width: 100%;
   height: 15px;
@@ -44,6 +46,20 @@ input[type="range"] {
   cursor: pointer;
 }
 
+/* FILLS IN PLAYBACK BAR in FIREFOX */
+input[type="range"]::-moz-range-progress {
+	background-color: #E88C0B;
+}
+
+
+
+input[type="range"]:: {
+	background-color: #E88C0B;
+}
+
+
+
+
 p {
 	cursor: default;
 }
@@ -51,9 +67,8 @@ p {
 
 
 .highlight {
-	color: orange;
+	color: #E88C0B;
 }
-
 
 
 

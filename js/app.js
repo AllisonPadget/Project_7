@@ -70,29 +70,15 @@ video.addEventListener('timeupdate', function(e){
 });
 
 
-//Progress Bar - fill in as video plays
-
-
-
-
-
-
-
-
 
 //Progress Bar - update spot when clicked
 
-//NOT WORKING 
-
-
-progressBar.addEventListener('change', function(){
-  var time = video.duration * (progressBar.value / 100);
+progressBar.addEventListener('change', function(e){
+  var time = video.duration * (e.target.value / 100);
   video.currentTime = time;
 });
 
-
-
-
+//NOT WORKING IN CHROME (works in FIREFOX) -- highlight doesn't remove
 
 //*****************************************
 
