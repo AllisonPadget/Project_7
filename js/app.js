@@ -70,31 +70,14 @@ video.addEventListener('timeupdate', function(e){
 });
 
 
-
-
-
 //Progress Bar - update spot when clicked
 
-// progressBar.addEventListener('change', function(e){
-//   var time = video.duration * (e.target.value / 100);
-//   video.currentTime = time;
-// });
-
-//works the same as 'change'
-// progressBar.addEventListener('click', function(){
-//   var time = video.duration * (progressBar.value / 100);  
-//   video.currentTime = time;
-// });
 
 progressBar.addEventListener('change', function(){
-  var updateTime = video.duration * (progressBar.value / 100);
-
-  console.log(updateTime); // logging correct time, but video doesn't jump to that spot (Chrome)
-  
+  var updateTime = video.duration * (progressBar.value / 100);  
   video.currentTime = updateTime;
 });
 
-//NOT WORKING IN CHROME (works in FIREFOX) -- highlight doesn't remove
 
 //*****************************************
 
