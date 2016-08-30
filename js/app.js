@@ -8,6 +8,7 @@ var volumeOff = document.getElementById("volume-off");
 
 var progressBar = document.getElementById("progress-bar");
 
+
 var currTime = document.getElementById("currentTime");
 var durTime = document.getElementById("totalTime");
 
@@ -27,8 +28,6 @@ playButton.addEventListener('click', function() {
   }
 });
 
-
-
 // Volume Controls - ON and OFF
 
 volumeOff.addEventListener('click', function() {
@@ -45,7 +44,6 @@ volumeOn.addEventListener('click', function() {
   } 
 });
 
-
 //Fullscreen
 
 fullScreenButton.addEventListener('click', function() {
@@ -58,9 +56,7 @@ fullScreenButton.addEventListener('click', function() {
   }
 });
 
-
 //*****************************************
-
 
 //Progress Bar - move with video
 
@@ -69,19 +65,41 @@ video.addEventListener('timeupdate', function(e){
 	progressBar.value = value;
 });
 
-
 //Progress Bar - update spot when clicked
 
+// progressBar.addEventListener('change', function(){
+//   var updateTime = video.duration * (progressBar.value / 100);  
 
-progressBar.addEventListener('change', function(){
-  var updateTime = video.duration * (progressBar.value / 100);  
-  video.currentTime = updateTime;
+//   console.log(updateTime);
+
+//   video.currentTime = updateTime;
+// });
+
+
+
+
+
+
+
+//**************** WITH <PROGRESS>  *************************
+
+
+
+progressBar.addEventListener('click', function(e){
+  var percent = e.offsetX * this.max / this.offsetWidth;
+
+  console.log(percent);
+
+  video.currentTime = video.duration * (percent / 100);
 });
 
 
+
+
+
+
+
 //*****************************************
-
-
 
 //display Time - update current playing time
 
@@ -93,8 +111,6 @@ video.addEventListener('timeupdate', function(){
 	currTime.innerHTML = ( x + y + " " + "/");
 });
 
-
-
 //video duration time
 
 video.addEventListener('timeupdate', function(){
@@ -102,7 +118,6 @@ video.addEventListener('timeupdate', function(){
 	var seconds = Math.floor(video.duration - minutes * 60);
 	durTime.innerHTML = ( minutes + ":" + seconds);
 });
-
 
 //*****************************************
 
@@ -129,7 +144,6 @@ video.addEventListener('timeupdate', function(){
 
 //Highlight transcript
 
-
 function startHighlight(startTime) {
   var highlight = document.querySelector('[data-start="' + startTime + '"]').classList;
   highlight.add('highlight');
@@ -139,7 +153,6 @@ function endHighlight(endTime) {
   var highlight = document.querySelector('[data-start="' + endTime + '"]').classList;
   highlight.remove('highlight');
 }
-
 
 //removes highlighting properly when skipping around
 

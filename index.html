@@ -16,6 +16,7 @@
     <div class="wrapper">
    
       <div class="video-container">
+
         <video id="video">
           <source src="video/video.mp4" type="video/mp4">
           <source src="video/video.ogg" type="video/ogg">
@@ -27,23 +28,24 @@
           <div class="leftSide-controls">
             <button id="play-btn" type="button"><img src="icons/play-icon.png"></button>
           </div>
-        
-
           <div class="rightSide-controls">
             <button id="volume-off" type="button"><img src="icons/volume-off-icon.png"></button>
             <button id="volume-on" type="button"><img src="icons/volume-on-icon.png"></button>
             <button id="fullscreen" type="button"><img src="icons/fullscreen-icon.png"></button>
           </div>
-          </div>
-
+          
           <div class="progress">
-            <input type="range" id="progress-bar" value="0"> 
+            <!-- <input type="range" id="progress-bar" value="0" max="100"> -->
+            <progress id="progress-bar" value="0" max="100"></progress>
           </div>
 
            <div class="displayTime">
             <span id="currentTime">0:00 /</span>
             <span id="totalTime">0:00</span>
           </div>
+
+        </div>
+
       </div>
 
      

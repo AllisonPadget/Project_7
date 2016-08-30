@@ -10,7 +10,7 @@ video {
 }
 
 .video-controls {
-	position: absolute;
+	/*position: absolute;*/
 	width: 100%;
 }
 
@@ -29,7 +29,7 @@ video {
 
 
 .progress {
-	position: relative;
+	/*position: relative;*/
 	bottom: 20px;
 }
 
@@ -46,16 +46,67 @@ input[type="range"] {
   cursor: pointer;
 }
 
+progress {
+	width: 100%;
+	height: 15px;
+	margin: 0;
+	border: none;
+	padding: 1px 2px;
+	background: rgba(0,0,0,0.5);
+	outline: none; 
+	cursor: pointer;
+}
+
+
+
 /* FILLS IN PLAYBACK BAR in FIREFOX */
+
+progress::-moz-progress-bar {
+	background-color: #E88C0B;
+}
+
 input[type="range"]::-moz-range-progress {
 	background-color: #E88C0B;
+}
+
+/*hiding thumb FIREFOX*/
+input[type=range]::-moz-range-thumb {
+	background: rgba(0,0,0,0);
+	border: none;
+}
+
+
+/*Chrome and Safari*/
+input[type="range"] {
+	-webkit-appearance: none;
+	overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+	background: rgba(0,0,0,0);
+}
+
+progress::-webkit-progress-value {
+	background-color: #E88C0B;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: rgba(0,0,0,0.5);
 }
 
 
 
 
-/*input[type="range"] {
-	background-color: #E88C0B;
+
+
+/*hiding thumb - filling in playback -- CRAP!!!!*/
+/*input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 10px;
+	height: 15px;
+    background: rgba(0,0,0,0);
+
+    box-shadow: -10px 0 0 0 #E88C0B, -20px 0 0 0 #E88C0B, -30px 0 0 0 #E88C0B, -40px 0 0 0 #E88C0B, -50px 0 0 0 #E88C0B, -60px 0 0 0 #E88C0B, -70px 0 0 0 #E88C0B, -80px 0 0 0 #E88C0B, -90px 0 0 0 #E88C0B, -100px 0 0 0 #E88C0B, -110px 0 0 0 #E88C0B, -120px 0 0 0 #E88C0B, -130px 0 0 0 #E88C0B, -140px 0 0 0 #E88C0B, -150px 0 0 0 #E88C0B, -160px 0 0 0 #E88C0B, -170px 0 0 0 #E88C0B, -180px 0 0 0 #E88C0B, -190px 0 0 0 #E88C0B, -200px 0 0 0 #E88C0B, -210px 0 0 0 #E88C0B, -220px 0 0 0 #E88C0B, -230px 0 0 0 #E88C0B, -240px 0 0 0 #E88C0B, -250px 0 0 0 #E88C0B, -260px 0 0 0 #E88C0B, -270px 0 0 0 #E88C0B, -280px 0 0 0 #E88C0B, -290px 0 0 0 #E88C0B, -300px 0 0 0 #E88C0B, -310px 0 0 0 #E88C0B, -320px 0 0 0 #E88C0B, -330px 0 0 0 #E88C0B, -340px 0 0 0 #E88C0B, -350px 0 0 0 #E88C0B, -360px 0 0 0 #E88C0B, -370px 0 0 0 #E88C0B, -380px 0 0 0 #E88C0B, -390px 0 0 0 #E88C0B, -400px 0 0 0 #E88C0B, -410px 0 0 0 #E88C0B, -420px 0 0 0 #E88C0B, -430px 0 0 0 #E88C0B, -440px 0 0 0 #E88C0B, -450px 0 0 0 #E88C0B, -460px 0 0 0 #E88C0B, -470px 0 0 0 #E88C0B, -480px 0 0 0 #E88C0B, -490px 0 0 0 #E88C0B, -500px 0 0 0 #E88C0B, -510px 0 0 0 #E88C0B, -520px 0 0 0 #E88C0B, -530px 0 0 0 #E88C0B, -540px 0 0 0 #E88C0B, -550px 0 0 0 #E88C0B, -560px 0 0 0 #E88C0B, -570px 0 0 0 #E88C0B, -580px 0 0 0 #E88C0B, -590px 0 0 0 #E88C0B, -600px 0 0 0 #E88C0B, -610px 0 0 0 #E88C0B, -620px 0 0 0 #E88C0B, -630px 0 0 0 #E88C0B, -640px 0 0 0 #E88C0B, -650px 0 0 0 #E88C0B;
 }*/
 
 
