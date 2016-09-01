@@ -19,6 +19,7 @@ video {
 button {
 	background: rgba(0,0,0,0); 
 	border: none;
+	outline: none;
 }
 
 .displayTime {

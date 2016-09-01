@@ -123,21 +123,14 @@ video.addEventListener('timeupdate', function(){
 
 //Hide and Show controls
 
-// $('#video').mouseenter(function() {
-// 	$('#video-controls').fadeIn(500);
-// });
 
-// $('#video').mouseleave(function() {
-// 	$('#video-controls').fadeOut(900);
-// });
+$('#video').mouseleave(function() {
+  $('.control').hide();
+});
 
-// $('#video').mouseenter(function() {
-// 	$('.displayTime').fadeIn(500);
-// });
-
-// $('#video').mouseleave(function() {
-// 	$('.displayTime').fadeOut(900);
-// });
+$('#video').mouseenter(function() {
+  $('.control').show();
+});
 
 
 //*****************************************
