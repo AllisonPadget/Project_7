@@ -6,7 +6,14 @@
 	 \ /  ** ** ** ** ** ** ** **
 		\/
 *************************************/
+@media only screen and (min-width: 768px) {
 
+	progress {
+		height: 10px;
+	}
+
+	
+}
 
 
 /**********************************
@@ -17,3 +24,17 @@
 	 \ /  ** ** ** ** ** ** ** **
 		\/
 *************************************/
+
+@media only screen and (min-width: 1024px) {
+
+	
+	progress {
+		height: 15px;
+	}
+
+	.transcript {
+		margin: 0 50px;
+		line-height: 2;
+	}
+
+}
