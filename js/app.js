@@ -14,12 +14,10 @@ var durTime = document.getElementById("totalTime");
 
 //*****************************************
 
-
 // Play and Pause Buttons
 
-
 playButton.addEventListener('click', function() {
-  if (video.paused == true) {
+  if (video.paused === true) {
     video.play();
     playButton.innerHTML = "<img src='icons/pause-icon.png'/>";
   } else {
@@ -31,14 +29,14 @@ playButton.addEventListener('click', function() {
 // Volume Controls - ON and OFF
 
 volumeOff.addEventListener('click', function() {
-  if (video.muted == false) {
+  if (video.muted === false) {
     // Mute the video
     video.muted = true;
   } 
 });
 
 volumeOn.addEventListener('click', function() {
-  if (video.muted == true) {
+  if (video.muted === true) {
     // Unmute the video
     video.muted = false;
   } 
@@ -65,24 +63,7 @@ video.addEventListener('timeupdate', function(e){
 	progressBar.value = value;
 });
 
-//Progress Bar - update spot when clicked
-
-// progressBar.addEventListener('change', function(){
-//   var updateTime = video.duration * (progressBar.value / 100);  
-
-//   console.log(updateTime);
-
-//   video.currentTime = updateTime;
-// });
-
-
-
-
-
-
-
 //**************** WITH <PROGRESS>  *************************
-
 
 
 progressBar.addEventListener('click', function(e){
@@ -92,11 +73,6 @@ progressBar.addEventListener('click', function(e){
 
   video.currentTime = video.duration * (percent / 100);
 });
-
-
-
-
-
 
 
 //*****************************************
@@ -118,20 +94,6 @@ video.addEventListener('timeupdate', function(){
 	var seconds = Math.floor(video.duration - minutes * 60);
 	durTime.innerHTML = ( minutes + ":" + seconds);
 });
-
-//*****************************************
-
-//Hide and Show controls
-
-
-$('#video').mouseleave(function() {
-  $('.control').hide();
-});
-
-$('#video').mouseenter(function() {
-  $('.control').show();
-});
-
 
 //*****************************************
 
@@ -158,7 +120,7 @@ video.addEventListener('timeupdate', function(){
       endHighlight('00.24');
   }
   if (time >= 4.13 && time < 7.535) {
-      startHighlight('4.13')
+      startHighlight('4.13');
   } else {
       endHighlight('4.13');
   }
@@ -190,7 +152,7 @@ video.addEventListener('timeupdate', function(){
   if (time >= 26.88 && time < 32.1) {
     startHighlight('26.88');
   } else {
-    endHighlight('26.88')
+    endHighlight('26.88');
   }
   if (time >= 32.1 && time < 34.73) {
     startHighlight('32.1');
@@ -233,83 +195,3 @@ video.addEventListener('timeupdate', function(){
     endHighlight('57.78');
   }
 });
-
-
-
-
-
-
-
-
-
-
-//old
-
-
-// video.addEventListener('timeupdate', function(){
-//   var time = video.currentTime;
-
-//   if (time > 0.24 && time < 4.13) {
-//       startHighlight('00.24');
-//   } else if (time >= 4.13 && time < 7.535) {
-//       endHighlight('00.24');
-//       startHighlight('4.13'); 
-//   } else if (time >= 7.535 && time < 11.27) {
-//       endHighlight('4.13');
-//       startHighlight('7.535');
-//   } else if (time >= 11.27 && time < 13.96) {
-//       endHighlight('7.535');
-//       startHighlight('11.27');
-//   } else if (time >= 13.96 && time < 17.94) {
-//       endHighlight('11.27');
-//       startHighlight('13.96');
-//   } else if (time >= 17.94 && time < 22.37) {
-//       endHighlight('13.96');
-//       startHighlight('17.94');
-//   } else if (time >= 22.37 && time < 26.88) {
-//       endHighlight('17.94');
-//       startHighlight('22.37');
-//   } else if (time >= 26.88 && time < 32.1) {
-//       endHighlight('22.37');
-//       startHighlight('26.88');
-//   } else if (time >= 32.1 && time < 34.73) {
-//       endHighlight('26.88');
-//       startHighlight('32.1');
-//   } else if (time >= 34.73 && time < 39.43) {
-//       endHighlight('32.1');
-//       startHighlight('34.73');
-//   } else if (time >= 39.43 && time < 42.35) {
-//       endHighlight('34.73');
-//       startHighlight('39.43');
-//   } else if (time >= 42.35 && time < 46.3) {
-//       endHighlight('39.43');
-//       startHighlight('42.35');
-//   } else if (time >= 46.3 && time < 49.27) {
-//       endHighlight('42.35');
-//       startHighlight('46.3');
-//   } else if (time >= 49.27 && time < 53.76) {
-//       endHighlight('46.3');
-//       startHighlight('49.27');
-//   } else if (time >= 53.76 && time < 57.78) {
-//       endHighlight('49.27');
-//       startHighlight('53.76');
-//   } else if (time >= 57.78 && time < 59.00) {
-//       endHighlight('53.76');
-//       startHighlight('57.78');
-//   }
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

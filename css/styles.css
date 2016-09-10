@@ -1,10 +1,10 @@
 /*** mobile first ****/
 
-video {
-	width: 100%;
+.video-container {
+	position: relative;
 }
 
-.video-controls {
+video {
 	width: 100%;
 }
 
@@ -20,24 +20,38 @@ button {
 	background: rgba(0,0,0,0); 
 	border: none;
 	outline: none;
+	min-height: 40px;
 }
 
 .displayTime {
 	padding-left: 45px;
-	padding-top: 7px;
+	padding-top: 10px;
+	color: white;
 }
 
 .video-controls {
-	position: relative; 
 	width: 100%;
-	bottom: 60px;
+	position: absolute;
+	bottom: 0;
+}
+.control {
+	display: none;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
+.video-container:hover .control {
+	display: block;
+}
 
+.progress {
+	padding-left: 6px;
+	padding-right: 6px;
+}
 
-
-
-
+.video-controls {
+	padding-bottom: 8px;
+}
 
 /*Progress Element*/
 
@@ -68,7 +82,6 @@ progress::-webkit-progress-value {
 	background-color: #E88C0B;
 }
 
-
 /*Transcript*/
 
 p {
@@ -83,10 +96,3 @@ p {
 	margin: 0 25px;
 	line-height: 1.75;
 }
-
-
-
-
-
-
-

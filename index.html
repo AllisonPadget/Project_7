@@ -1,58 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allison Padget | Interactive Video Player</title>
-
     <link rel="stylesheet" href="css/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/media.css">
-
   </head>
   <body>
-    
     <div class="wrapper">
-   
       <div class="video-container">
-
         <video id="video">
           <source src="video/video.mp4" type="video/mp4">
           <source src="video/video.ogg" type="video/ogg">
           <track label="English" kind="subtitles" srclang="en" src="video/captions.vtt" default>
         </video>
-      
         <div id="video-controls" class="video-controls">
-
           <div class="progress">
             <progress id="progress-bar" value="0" max="100"></progress>
           </div>
           <div class="control">
             <div class="leftSide-controls">
-              <button id="play-btn" type="button"><img src="icons/play-icon.png"></button>
+              <button id="play-btn" type="button"><img src="icons/play-icon.png" alt="play"></button>
             </div>
             <div class="rightSide-controls">
-              <button id="volume-off" type="button"><img src="icons/volume-off-icon.png"></button>
-              <button id="volume-on" type="button"><img src="icons/volume-on-icon.png"></button>
-              <button id="fullscreen" type="button"><img src="icons/fullscreen-icon.png"></button>
+              <button id="volume-off" type="button"><img src="icons/volume-off-icon.png" alt="volume off"></button>
+              <button id="volume-on" type="button"><img src="icons/volume-on-icon.png" alt="volume on"></button>
+              <button id="fullscreen" type="button"><img src="icons/fullscreen-icon.png" alt="fullscreen"></button>
             </div>
-          
-
-      
-
-           <div class="displayTime">
-            <span id="currentTime">0:00 /</span>
-            <span id="totalTime">0:00</span>
+            <div class="displayTime">
+              <span id="currentTime">0:00 /</span>
+              <span id="totalTime">0:00</span>
+            </div>
           </div>
-
-          </div>
-        </div>
-
-      </div>
-
-     
-
+        </div><!-- #video-controls -->
+      </div><!-- .video-container -->
       <div class="transcript">
         <p>
           <span data-start="00.24">Now that we've looked at the architecture of the internet, let's see how you might</span>
@@ -74,14 +58,7 @@
         </p>
       </div>
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="js/app.js"></script>
-
   </body>
 </html>
-
-
-
-
-
